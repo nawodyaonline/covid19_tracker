@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'package:http/http.dart' as http;
+import 'dart:async';
+import 'dart:convert';
+
 class Home extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -9,6 +13,20 @@ class Home extends StatefulWidget {
 
 // ignore: camel_case_types
 class _homeState extends State<Home> {
+  // ignore: missing_return
+  Future getData() async {
+    http.Response response = await http
+        .get("https://www.hpb.health.gov.lk/api/get-current-statistical");
+
+    debugPrint(response.body);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getData();
+  }
+
   int totalCases = 0;
   int totalRecover = 0;
   int totalDead = 0;
@@ -29,14 +47,11 @@ class _homeState extends State<Home> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: Expanded(
-                      child: Text(
-                        'Covid-19 \n Tracker',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 40),
-                      ),
+                  Expanded(
+                    child: Text(
+                      'Covid-19 \n Tracker',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
                     ),
                   ),
                   Container(
