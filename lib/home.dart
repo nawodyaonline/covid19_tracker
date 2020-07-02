@@ -1,5 +1,3 @@
-import 'dart:collection';
-
 import 'package:flutter/material.dart';
 
 import 'package:http/http.dart' as http;
@@ -149,6 +147,7 @@ class _homeState extends State<Home> {
                                     totalRecover.toString(),
                                     style: TextStyle(
                                       fontSize: 25,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   )
                                 ],
@@ -203,6 +202,7 @@ class _homeState extends State<Home> {
                                     totalDead.toString(),
                                     style: TextStyle(
                                       fontSize: 30,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   )
                                 ],
@@ -246,6 +246,7 @@ class _homeState extends State<Home> {
                                     totalActive.toString(),
                                     style: TextStyle(
                                       fontSize: 30,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   )
                                 ],
@@ -286,6 +287,7 @@ class _homeState extends State<Home> {
                                     totalCases.toString(),
                                     style: TextStyle(
                                       fontSize: 30,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   )
                                 ],
@@ -310,7 +312,7 @@ class _homeState extends State<Home> {
                         'Copyright ©  👦 Nawodya Jayalath',
                         style: TextStyle(
                           color: Colors.blueGrey[700],
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w300,
                         ),
                       ),
                     ),
