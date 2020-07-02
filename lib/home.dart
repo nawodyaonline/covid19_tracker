@@ -182,7 +182,7 @@ class _homeState extends State<Home> {
                                   SizedBox(
                                     height: 70,
                                     child: Image.asset(
-                                      'images/dead.jpg',
+                                      'images/death.png',
                                       width: 100,
                                     ),
                                   ),
