@@ -55,8 +55,7 @@ class _homeState extends State<Home> {
         child: Padding(
           padding:
               const EdgeInsets.only(top: 20.0, left: 8, right: 8, bottom: 2),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+          child: ListView(
             children: <Widget>[
               // Top Row Bar with title & flag
               Padding(
@@ -84,6 +83,7 @@ class _homeState extends State<Home> {
               // TextArea
               Text(
                 'Live Situational Dashboard',
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.red,
                   fontWeight: FontWeight.bold,
@@ -95,6 +95,7 @@ class _homeState extends State<Home> {
               ),
               Text(
                 'Last Update: $dateTime',
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 15,
@@ -307,7 +308,7 @@ class _homeState extends State<Home> {
                       height: 20,
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: Text(
                         'Copyright ©  👦 Nawodya Jayalath',
                         style: TextStyle(
